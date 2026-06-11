@@ -29,7 +29,7 @@ interface RevenueDataPoint {
 }
 
 interface RevenueBreakdownChartProps {
-  data: RevenueDataPoint[];
+  data?: RevenueDataPoint[];
   loading?: boolean;
   onExport?: () => void;
 }
@@ -64,7 +64,7 @@ function toPercent(data: RevenueDataPoint[]): RevenueDataPoint[] {
 }
 
 export function RevenueBreakdownChart({
-  data,
+  data = [],
   loading = false,
   onExport,
 }: RevenueBreakdownChartProps) {

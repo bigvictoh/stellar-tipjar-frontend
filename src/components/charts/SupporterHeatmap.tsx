@@ -12,7 +12,7 @@ interface HeatmapDataPoint {
 }
 
 interface SupporterHeatmapProps {
-  data: HeatmapDataPoint[];
+  data?: HeatmapDataPoint[];
   loading?: boolean;
   onExport?: () => void;
 }
@@ -84,7 +84,7 @@ function buildGrid(data: HeatmapDataPoint[]) {
 }
 
 export function SupporterHeatmap({
-  data,
+  data = [],
   loading = false,
   onExport,
 }: SupporterHeatmapProps) {

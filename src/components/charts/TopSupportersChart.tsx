@@ -24,7 +24,7 @@ interface SupporterDataPoint {
 }
 
 interface TopSupportersChartProps {
-  data: SupporterDataPoint[];
+  data?: SupporterDataPoint[];
   loading?: boolean;
   onExport?: () => void;
 }
@@ -47,7 +47,7 @@ const AXIS_STYLE = { fontSize: 11, fill: "rgba(21,21,21,0.45)" };
 const GRID_STROKE = "rgba(21,21,21,0.07)";
 
 export function TopSupportersChart({
-  data,
+  data = [],
   loading = false,
   onExport,
 }: TopSupportersChartProps) {

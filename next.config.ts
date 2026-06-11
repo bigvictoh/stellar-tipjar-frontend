@@ -9,8 +9,6 @@ const withNextIntl = createNextIntlPlugin('./src/i18n.ts');
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   typedRoutes: true,
-  // Empty turbopack config to silence the warning
-  turbopack: {},
 
   images: {
     formats: ["image/avif", "image/webp"],

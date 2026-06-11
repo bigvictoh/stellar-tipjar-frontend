@@ -32,7 +32,7 @@ interface TipTrendDataPoint {
 }
 
 interface TipTrendChartProps {
-  data: TipTrendDataPoint[];
+  data?: TipTrendDataPoint[];
   loading?: boolean;
   /** Enable real-time polling simulation */
   realtime?: boolean;
@@ -60,7 +60,7 @@ function computeAverage(data: TipTrendDataPoint[]): TipTrendDataPoint[] {
 }
 
 export function TipTrendChart({
-  data: staticData,
+  data: staticData = [],
   loading = false,
   realtime = false,
   realtimeFetcher,

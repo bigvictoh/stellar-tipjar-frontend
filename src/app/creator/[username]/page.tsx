@@ -7,7 +7,7 @@ import { Button } from "@/components/Button";
 import { ReportButton } from "@/components/ReportButton";
 import { TipForm } from "@/components/forms/TipForm";
 import { CreatorStatsDashboard } from "@/components/stats/CreatorStatsDashboard";
-import { TipComments } from "@/components/TipComments";
+import TipComments from "@/components/TipComments";
 import { CreatorPageRecommendations } from "@/components/CreatorPageRecommendations";
 import { EventCalendar } from "@/components/EventCalendar";
 import { creatorUsernameSchema } from "@/schemas/creatorSchema";

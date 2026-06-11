@@ -19,7 +19,7 @@ interface DistributionDataPoint {
 }
 
 interface DistributionChartProps {
-  data: DistributionDataPoint[];
+  data?: DistributionDataPoint[];
   loading?: boolean;
   onExport?: () => void;
 }
@@ -94,7 +94,7 @@ function ActiveShape(props: any) {
 }
 
 export function DistributionChart({
-  data,
+  data = [],
   loading = false,
   onExport,
 }: DistributionChartProps) {

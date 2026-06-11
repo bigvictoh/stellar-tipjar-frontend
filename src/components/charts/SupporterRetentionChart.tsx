@@ -25,12 +25,19 @@ interface RetentionMetrics {
 }
 
 interface SupporterRetentionChartProps {
-  metrics: RetentionMetrics;
+  metrics?: RetentionMetrics;
   /** Optional comparison period metrics */
   prevMetrics?: RetentionMetrics;
   loading?: boolean;
   onExport?: () => void;
 }
+
+const DEFAULT_METRICS: RetentionMetrics = {
+  revenueGrowth: 0,
+  supporterGrowth: 0,
+  repeatSupporterRate: 0,
+  supporterRetentionRate: 0,
+};
 
 function toRadarData(current: RetentionMetrics, prev?: RetentionMetrics) {
   const entries = [
@@ -52,7 +59,7 @@ function toRadarData(current: RetentionMetrics, prev?: RetentionMetrics) {
 }
 
 export function SupporterRetentionChart({
-  metrics,
+  metrics = DEFAULT_METRICS,
   prevMetrics,
   loading = false,
   onExport,
