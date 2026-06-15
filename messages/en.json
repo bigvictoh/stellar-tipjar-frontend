@@ -15,13 +15,19 @@
     "confirm": "Confirm"
   },
   "nav": {
+    "brandName": "Stellar Tip Jar",
     "home": "Home",
     "explore": "Explore Creators",
     "tips": "Send a Tip",
     "about": "About",
     "dashboard": "Dashboard",
     "settings": "Settings",
-    "profile": "Profile"
+    "profile": "Profile",
+    "searchPlaceholder": "Search creators...",
+    "openMenu": "Open mobile menu",
+    "achievements": "Achievements",
+    "widgets": "Widgets",
+    "marketplace": "Marketplace"
   },
   "wallet": {
     "connect": "Connect Wallet",

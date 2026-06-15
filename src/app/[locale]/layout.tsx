@@ -47,8 +47,8 @@ export default async function LocaleLayout({
         <CurrencyProvider>
         <WalletProvider>
           <ReactQueryProvider>
-            <WebSocketProvider>
-              <ToastProvider>
+            <ToastProvider>
+              <WebSocketProvider>
                 <NextIntlClientProvider messages={messages}>
                   <div className="min-h-screen flex flex-col">
                     <Navbar />
@@ -64,8 +64,8 @@ export default async function LocaleLayout({
                 </NextIntlClientProvider>
               <InstallPrompt />
               <ToastContainer />
-              </ToastProvider>
-            </WebSocketProvider>
+              </WebSocketProvider>
+            </ToastProvider>
           </ReactQueryProvider>
         </WalletProvider>
         </CurrencyProvider>
