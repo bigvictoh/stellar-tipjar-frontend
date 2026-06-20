@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { LeaderboardTable } from "./LeaderboardTable";
 import { TimeFilter } from "./TimeFilter";
 import { useLeaderboards } from "@/hooks/useLeaderboards";
-import type { TimeRange } from "@/types/leaderboards";
+import type { Period } from "@/services/api";
 
 interface Tab {
   value: "tippers" | "creators" | "biggest";
@@ -20,7 +20,7 @@ const tabs: Tab[] = [
 
 export function Leaderboards() {
   const [activeTab, setActiveTab] = useState<Tab["value"]>("tippers");
-  const [period, setPeriod] = useState<TimeRange>("monthly");
+  const [period, setPeriod] = useState<Period>("30d");
 
   const { data: leaderboardsData, isLoading } = useLeaderboards({ period });
   const leaderboards = (leaderboardsData || {}) as any;

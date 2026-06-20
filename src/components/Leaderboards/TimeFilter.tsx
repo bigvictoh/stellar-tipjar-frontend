@@ -1,17 +1,18 @@
 "use client";
 
 import { FilterDropdown, type FilterOption } from "../FilterDropdown";
-import type { TimeRange } from "@/types/leaderboards";
+import type { Period } from "@/services/api";
 
 const periods: FilterOption[] = [
-  { value: "daily", label: "Daily" },
-  { value: "weekly", label: "Weekly" },
-  { value: "monthly", label: "Monthly" },
+  { value: "24h", label: "24 Hours" },
+  { value: "7d", label: "7 Days" },
+  { value: "30d", label: "30 Days" },
+  { value: "all", label: "All Time" },
 ];
 
 interface TimeFilterProps {
-  value: TimeRange;
-  onChange: (value: TimeRange) => void;
+  value: Period;
+  onChange: (value: Period) => void;
 }
 
 export function TimeFilter({ value, onChange }: TimeFilterProps) {

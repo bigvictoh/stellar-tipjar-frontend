@@ -107,7 +107,7 @@ export function ProfileCompletionIndicator() {
                   className="group flex items-start justify-between gap-3 rounded-lg bg-canvas/50 dark:bg-ink/30 p-3 transition-colors hover:bg-canvas dark:hover:bg-ink/40"
                 >
                   <div className="flex-1 min-w-0">
-                    <Link href={field.link}>
+                    <Link href={field.link as any}>
                       <p className="text-sm font-semibold text-sunrise hover:underline">
                         {field.label}
                       </p>
