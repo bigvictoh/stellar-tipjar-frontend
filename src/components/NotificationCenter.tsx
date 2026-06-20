@@ -82,11 +82,7 @@ function NotificationItem({ notification }: { notification: Notification }) {
   );
 
   if (notification.link) {
-    return (
-      <Link href={notification.link} legacyBehavior>
-        <a style={{ textDecoration: "none" }}>{content}</a>
-      </Link>
-    );
+    return <Link href={notification.link as any}>{content}</Link>;
   }
 
   return content;
