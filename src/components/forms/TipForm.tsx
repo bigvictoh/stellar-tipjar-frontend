@@ -132,6 +132,7 @@ export function TipForm({ username, defaultUsername = "", defaultAssetCode = "XL
         <form
           onSubmit={handleSubmit(onSubmitCreator)}
           noValidate
+          data-tour="tip-form"
           aria-label={`Send a tip to ${username}`}
           className="space-y-4"
         >
