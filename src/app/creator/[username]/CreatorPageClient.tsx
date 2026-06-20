@@ -41,7 +41,7 @@ function CreatorPageContent({ username, profile }: CreatorPageClientProps) {
   const { tips, isLoading: tipsLoading, sortField, sortOrder, handleSort } = useTipHistory();
 
   return (
-    <section className="space-y-8 max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <section data-tour="creator-profile" className="space-y-8 max-w-7xl mx-auto px-4 sm:px-6 py-6">
       {/* Connection status indicators */}
       <div className="flex flex-wrap items-center gap-2">
         <WalletConnectionStatus />
