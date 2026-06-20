@@ -17,6 +17,7 @@ import { WebSocketProvider } from "@/contexts/WebSocketContext";
 import { ToastProvider } from "@/contexts/ToastContext";
 import { ToastContainer } from "@/components/Toast";
 import { Footer } from "@/components/Footer";
+import { ProductTour } from "@/components/ProductTour";
 import "@/styles/globals.css";
 
 export default async function LocaleLayout({
@@ -61,6 +62,7 @@ export default async function LocaleLayout({
                 </NextIntlClientProvider>
               <InstallPrompt />
               <ToastContainer />
+              <ProductTour />
               </WebSocketProvider>
             </ToastProvider>
           </ReactQueryProvider>

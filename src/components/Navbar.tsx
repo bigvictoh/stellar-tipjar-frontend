@@ -81,6 +81,7 @@ export function Navbar() {
       >
         <nav
           aria-label="Main navigation"
+          data-tour="navbar"
           className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8"
         >
           {/* Logo */}
@@ -94,7 +95,7 @@ export function Navbar() {
 
           {/* Desktop nav items */}
           <ul role="list" className="hidden items-center gap-6 md:flex">
-            <li>
+            <li data-tour="explore">
               <NavItem label="Explore" megaMenu={<ExploreMenu />} />
             </li>
             <li>
@@ -122,7 +123,9 @@ export function Navbar() {
             <LanguageSwitcher />
             <ThemeToggle />
             <NotificationBadge />
-            <WalletConnector />
+            <span data-tour="wallet-connector">
+              <WalletConnector />
+            </span>
 
             {/* Hamburger */}
             <button

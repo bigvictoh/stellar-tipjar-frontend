@@ -12,10 +12,12 @@ import {
   ChevronRightIcon,
   EnvelopeIcon,
   SwatchIcon,
+  QuestionMarkCircleIcon,
 } from "@heroicons/react/24/outline";
 import { Toggle } from "@/components/forms/Toggle";
 import { Button } from "@/components/Button";
 import { SoundPreferences } from "@/components/SoundPreferences";
+import { replayTour } from "@/hooks/useTour";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -303,7 +305,7 @@ const fadeUp = (delay: number) => ({
 
 export default function SettingsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-ink/5 to-transparent">
+    <div data-tour="settings" className="min-h-screen bg-gradient-to-b from-ink/5 to-transparent">
       <div className="max-w-3xl mx-auto px-4 py-8 sm:px-6">
         {/* Header */}
         <motion.div {...fadeUp(0)} className="mb-8">
@@ -348,6 +350,19 @@ export default function SettingsPage() {
           {/* Security / 2FA */}
           <motion.div {...fadeUp(0.2)}>
             <SecuritySettings />
+          </motion.div>
+
+          {/* Help */}
+          <motion.div {...fadeUp(0.22)}>
+            <SectionCard>
+              <SectionTitle icon={QuestionMarkCircleIcon} title="Help" />
+              <p className="text-sm text-ink/60 mb-4">
+                Take a guided walkthrough of the key features in Stellar Tip Jar.
+              </p>
+              <Button size="sm" variant="outline" onClick={replayTour}>
+                Replay product tour
+              </Button>
+            </SectionCard>
           </motion.div>
 
           {/* Danger zone */}
