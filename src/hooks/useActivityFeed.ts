@@ -32,7 +32,7 @@ export function useActivityFeed(creator?: string) {
   filterRef.current = filter;
 
   useEffect(() => {
-    const socket = socketRef.current;
+    const socket = clientRef.current;
     if (!socket) return;
 
     const handleActivity = (item: ActivityItem) => {
@@ -40,11 +40,11 @@ export function useActivityFeed(creator?: string) {
       setItems((prev) => [item, ...prev]);
     };
 
-    socket.on("activity:new", handleActivity);
+    socket.subscribe("activity:new", handleActivity);
     return () => {
-      socket.off("activity:new", handleActivity);
+      socket.unsubscribe("activity:new", handleActivity);
     };
-  }, [socketRef, creator]);
+  }, [clientRef, creator]);
 
   const filtered =
     filter === "all" ? items : items.filter((i) => i.type === filter);
