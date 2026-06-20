@@ -295,6 +295,7 @@ export function Navbar() {
         isOpen={mobileOpen}
         onClose={() => setMobileOpen(false)}
       />
+      <NotificationCenter />
       <BottomDock onOpenMenu={() => setMobileOpen(true)} />
     </>
   );
